@@ -1,0 +1,51 @@
+<html lang="en">
+    <head>
+        <title>Chart.js Jittered Data - Custom Function</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="../static/js/scripts.js"></script>
+    </head>
+    <body translate="no">
+    <div style="width: 50%;">
+        <canvas id="Chart"></canvas>
+    </div>
+    
+    <script>
+        var chart = document.getElementById("Chart");
+        const labels = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24]
+        const data = {
+                labels: labels,
+                datasets: [
+                    {
+                    label: 'Regresión Lineal',
+                    backgroundColor: 'red',
+                    borderColor: 'red',
+                    data: [112.12, 111.99, 109.16, 105.04, 104.68, 105.06, 106.45, 103.64, 101.81, 100.34, 102.45, 102.9, 100.35, 101.52, 108.16, 105.8, 106.15, 104.38, 102.82, 101.55, 103.88],
+                    trendlineLinear: {
+                    style: "blue",
+                    lineStyle: "line",
+                    width: 2
+                    }
+                },
+                    
+                ]
+        };
+
+        const config = {
+            type: 'line',
+            data: data,
+            options: {
+                // Animations
+                showLine: false,
+                plugins:{
+                    title: {
+                        display: true,
+                        text: "Regresion Lineal de ZYNGA"
+                    }
+                }
+            }
+        };
+            
+            var myChart = new Chart(chart, config);
+    </script>
+    </body>
+</html>

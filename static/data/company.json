@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "AMD",
+        "body": "AMD es una compañía estadounidense que se dedica al desarrollo de semiconductores, para la posterior construcción de procesadores de computación y productos tecnológicos similares de consumo. ",
+        "data": "AMDCSV.csv",
+        "img": "https://hardzone.es/app/uploads/2018/07/amd-zen-2-mejora-ipc-15-y-hasta-16-nucleos.jpg"
+    },
+    {
+        "id": 2,
+        "title": "QCOM",
+        "body": "Qualcomm es una compañía que produce chipsets para la tecnología móvil CDMA y W-CDMA. Creadores y diseñadores de los procesadores Snapdragon, también son responsable del cliente de correo electrónico Eudora. ",
+        "data": "QCOMCSV.csv",
+        "img": "https://www.edomtech.com/en/upload/fac_manufacturers_list_pic_s/7f4a80406f701807a88004a6bb6a0af5.jpg"
+    },
+    {
+        "id": 3,
+        "title": "ZYNGA",
+        "body": "Zynga es una empresa que se dedica al desarrollo de videojuegos sociales en línea, basándose en los sistemas de Web 2.0 y son implementados y/o presentados en plataformas como Facebook. ",
+        "data": "ZYNGACSV.csv",
+        "img": "https://www.puntonegocio.com/images/easyblog_articles/334/historia-de-zynga-2.png"
+    }
+]

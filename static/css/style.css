@@ -1,0 +1,110 @@
+*{
+  font-size: 1.08rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  position: relative;
+  /* font-family: 'Bebas Neue', cursive; */
+}
+
+header{
+  background-color: aqua;
+  background: url('../img/header.png');
+  background-position: center;
+  background-size: cover;
+  padding-left: 0;
+}
+
+.container-text p{
+  font-size: 2rem;
+  color: white;
+  font-weight: 100;
+}
+
+.bg-dark{
+  background-color:#0C2F50 !important ;
+}
+
+.hr{
+  border-bottom: solid white 3px;
+  margin-bottom: 10px;
+}
+
+.text-background{
+  position: relative;
+  background-color:#0C2F50 !important ;
+}
+
+.container-text{
+  position: relative;
+  padding: 4%;
+  padding-bottom: 2%;
+}
+
+.container-text h1{
+  font-size: 5rem;
+}
+
+.row{
+  margin-right: 0;
+}
+
+.container-index{
+  padding: 4% 0;
+  padding-top: 8%;
+}
+
+.buttons{
+  padding-top: 20px;
+}
+.who-is{
+  width: 50%;
+  margin: auto auto;
+}
+.container-index .btn-primary{
+  background-color: #0C2F50 !important;
+  border-color: #0C2F50;
+}
+
+.data-text{
+  padding: 5%;
+  opacity: 1;
+}
+.text-margin{
+  padding-top: 6%;
+  opacity: 1;
+}
+
+.container-index .btn-primary:hover{
+  background-color: #0f253d !important;
+}
+
+/* .btn-outline-primary{
+  border-color: #0C2F50;
+  color: #0C2F50;
+}
+
+.btn-outline-primary:hover{
+  border: #0C2F50;
+  background-color: #0C2F50;
+  color: white;
+} */
+
+
+/* .container-index h1{
+  object-fit: cover;
+} */
+
+.feature {
+  display: inline-flex;
+  align-items: center;
+  text-align: center !important;
+  position: relative;
+  justify-content: center;
+  height: 4rem;
+  width: 4rem;
+  font-size: 2rem;
+}
+
+/* Card */
+.table-data{
+  padding: 2% 10%;
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Linear Regression</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="../static/assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <!-- Bootstrap CSS v5.0.2 -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@100;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="static\css\style.css">
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container px-5">
+                <a class="navbar-brand" href="{{url_for('index')}}">I&C'S CONSULTING</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#inicio">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#ejemplo">Ejemplo</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Header-->
+        <header id="inicio" class="header-index py-5">
+            <!-- <img src="../static/img/header.png"> -->
+            <div class=" container-index">
+                
+                <div class="row">
+                    <div class="col-lg-6 col-sm-8">
+                        <div class="text-center my-5">
+                            <div class="text-background text-center">
+                                <div class="container-text">
+                                    <h1 class="display-5 fw-bolder text-white mb-2">I&C'S CONSULTING</h1>
+                                    <hr style="color:white;">
+                                    <p class=" mb-4">Una estrategia para crecer</p>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center buttons">
+                                <a class="btn btn-primary btn-block btn-lg px-4 me-sm-3" href="#contacto">Únete</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="#nosotros">Acerca de nosotros</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Features section-->
+        <section class="py-5 border-bottom" id="nosotros">
+            <div class="text-center mb-5">
+                <h2 class="fw-bolder pt-3">¿Qué hacemos?</h2>
+                <p class="lead mb-0 who-is pb-4" style="font-weight: 400;">Análizamos el crecimiento de tu compañía a través de raw data, utilizada para generar predicciones sobre el crecimiento de la empresa.</p>
+            </div>
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                        <h2 class="h4 fw-bolder">Consultoria empresarial</h2>
+                        <p >Servicio de asesoramiento profesional en la planeacion financiera que tiene como proposito identificar y trabajar oportunidades de mejora dentro de las empresas</p>
+                        <a class="text-decoration-none" href="#!">
+                            Conocer más
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0 ">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                        <h2 class="h4 fw-bolder">Estadistica corporativa</h2>
+                        <p style="text-align: justify;">Servicio de recolección, ordenación, análisis, interpretación y presentación, de datos correspondientes a experimento previamente planeado o definido, o una situaciónla empresa mediante una historica serie de datos a manejar.</p>
+                        <a class="text-decoration-none" href="#!">
+                            Conocer más
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h4 fw-bolder">Análisis del mercado</h2>
+                        <p style="text-align: justify;">Examen sistemático de un mercado y sus condiciones.</p>
+                        <a class="text-decoration-none" href="#!">
+                            Conocer más
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Pricing section-->
+        <section id="ejemplo" class="bg-light py-5 border-bottom text-center">
+            <div class="container px-5 my-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Mira lo que podemos hacer</h2>
+                    <p class="lead mb-0">Sin planes, solo disfruta</p>
+                </div>
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <!-- <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                            <h2 class="h4 fw-bolder">AMD</h2>
+                            <p>AMD es una compañía estadounidense que se dedica al desarrollo de semiconductores, para la posterior construccion de procesadores de computación y productos tecnológicos similares de consumo.</p>
+                            <a class="text-decoration-none btn btn-primary btn-block" href="#!">
+                                Analizar
+                                
+                            </a> -->
+                            
+                            <div class="card" style="width: 18rem;">
+                                <img src="data:image/jpeg;base64,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" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title h4 fw-bolder">AMD</h5>
+                                    <!-- <p>AMD es una compañía estadounidense que se dedica al desarrollo de semiconductores, para la posterior construccion de procesadores de computación y productos tecnológicos similares de consumo.</p> -->
+                                    <p>Análisis por años de la trayectoria de AMD.</p>
+                                    
+                                </div>
+                                <a class="text-decoration-none btn-block btn btn-primary " style="margin: 3%;" href="{{url_for('info', id=1)}}">
+                                    Analizar
+                                    
+                                    </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 mb-5 mb-lg-0">
+                            <div class="card" style="width: 18rem;">
+                                <img src="data:image/png;base64,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" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title h4 fw-bolder">ZYNGA</h5>
+                                    <!-- <p>Zynga es una empresa que se dedica al desarrollo de videojuegos sociales en línea, basándose en los sistemas de Web 2.0 y son implementados y/o presentados en plataformas como Facebook.</p> -->
+                                    <p>Análisis por trimestres de la trayectoria de ZYNGA.</p>
+                                    
+                                </div>
+                                <a href="{{url_for('info', id=3)}}" class="text-decoration-none btn btn-outline-primary btn-block" style="margin: 3%;"  href="#!">
+                                    Analizar
+                                    
+                                    </a>
+                            </div>
+                            <!-- <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                            <h2 class="h4 fw-bolder">ZYNGA</h2>
+                            <p>Zynga es una empresa que se dedica al desarrollo de videojuegos sociales en línea, basándose en los sistemas de Web 2.0 y son implementados y/o presentados en plataformas como Facebook.</p>
+                            <a class="text-decoration-none btn btn-primary btn-block" href="#!">
+                                Analizar
+                                
+                            </a> -->
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="card" style="width: 18rem;">
+                                <img src="https://pbs.twimg.com/media/DTC7OpjVAAAIduM.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title h4 fw-bolder">Qualcomm</h5>
+                                    <p>Análisis por años de la trayectoria de Qualcom.</p>
+                                    
+                                </div>
+                                <a class="text-decoration-none btn btn-primary btn-block" style="margin: 3%;" href="{{url_for('info', id=2)}}">
+                                    Analizar
+                                    
+                                    </a>
+                            </div>
+                            <!-- <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                            <h2 class="h4 fw-bolder">Qualcomm</h2>
+                            <p>Qualcomm es una compañía  que produce chipsets para la tecnología móvil CDMA y W-CDMA. Creadores y diseñadores de los procesadores Snapdragon, también son responsable del cliente de correo electrónico Eudora.</p>
+                            <a class="text-decoration-none btn btn-primary btn-block" href="#!">
+                                Analizar
+                                
+                            </a>
+                        </div> -->
+                    </div>
+                </div>
+        </section>
+        <!-- Testimonials section-->
+        <section class="py-5 border-bottom">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <h2 class="fw-bolder">Testimonios de clientes</h2>
+                    <p class="lead mb-0">Nuestros clientes aman trabajar con nosotros</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <!-- Testimonial 1-->
+                        <div class="card mb-4">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">Antes de contratar los servicios de I&C’s nuestra empresa andaba sin rumbo y no teníamos una visión clara de lo que queríamos lograr por lo que no podíamos explotar nuestro mayor potencial y crecer dentro de nuestro mercado de la manera en que queríamos. </p>
+                                        
+                                        <p class="mb-1">Tras implementar su consultoría como algo recurrente, los resultados han sido sorprendentes. Hemos podido tomar decisiones informadas que permiten capitalizar nuestros puntos fuertes y formar estrategias que nos permitan posicionarnos de una manera más efectiva. </p>
+                                            
+                                        <div class="small text-muted">- Inmuebles Lachapelle, RD</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Testimonial 2-->
+                        <div class="card">
+                            <div class="card-body p-4">
+                                <div class="d-flex">
+                                    <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
+                                    <div class="ms-4">
+                                        <p class="mb-1">Los recomiendo 100%. Para cualquier empresa debe ser una prioridad conocer y analizar su historia para que con vistas al futuro pueda tomar las mejores decisiones y que sean lo más efectivas posibles, con ayuda de I&C’s hemos podido crear estrategias que sean favorables y que realmente impulsen la compañía hacia donde queremos posicionarla. </p>
+                                        <div class="small text-muted">- D´Clara Importaciones, RD</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Contact section-->
+        <section id="contacto" class="bg-light py-5">
+            <div class="container px-5 my-5 px-5">
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <h2 class="fw-bolder">Contáctanos</h2>
+                    <p class="lead mb-0">Nos encantaría escucharte</p>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Nombre completo</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">Es necesario un nombre.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Dirección de correo</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">Es necesario un email.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">El email no es válido.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Número de teléfono</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">Es necesario un número de teléfono.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Mensaje</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">Es necesario un mensaje.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="d-grid"><button class="btn btn-primary btn-block btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container px-5"><p class="m-0 text-center text-white">Copyright &copy; Toribio 2021</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>
